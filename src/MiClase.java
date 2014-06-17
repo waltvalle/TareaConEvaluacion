@@ -1,4 +1,3 @@
-
 public class MiClase
 {
 	//devuelve la suma de a y b
@@ -22,12 +21,10 @@ public class MiClase
 	//devuelve true si num es par, de lo contrario, devuelve false
 	static boolean esPar(int num)
 	{
-	if ((num%2)==0)
-		return true;
-	else
-	{
-		return false;
-	}
+		if ((num%2)==0)
+			return true;
+		else
+			return false;
 	}
 	//devuelve el numero mayor entre a, b o c
 	static int getMayor(int a, int b, int c)
@@ -49,39 +46,59 @@ public class MiClase
 	
 	//devuelve num elevado a la potencia. http://foro.elhacker.net/java/calcular_potencia_en_java-t366409.0.html
 	static int potencia(int num, int potencia)
-	int i=num;
 	{
-		for (int i=0, i<potencia, i++)
-	{
-		return (potencia=i*num)
-	}
+		int calculo = num;
+		for (int i = 1; i < potencia; i++)
+		{
+			calculo = (calculo * num) ;
+		}
+		return (calculo);
+	}	
 	
 	//devuelve el numero mayor del arreglo
 	static int sumarArreglo(int arreglo[])
 	{
-		return -1;
+		int calculo = 0;
+		for (int i = 0; i < arreglo.length; i++)
+		{
+			calculo = calculo + arreglo[i] ;
+		}
+		return (calculo);
 	}
 	
 	//devuelve el numero mayor de un arreglo
 	static int getMayorArreglo(int arreglo[])
 	{
-		return -1;
+		int num = arreglo[0] ;
+		for (int i = 0; i < arreglo.length; i++)
+		{
+			if (arreglo[i] > num)
+			  num = arreglo[i] ;
+		}
+		return (num);
 	}
 	
 	//devuelve el numero menor de un arreglo
 	static int getMenorArreglo(int arreglo[])
 	{
-		return -1;
+		int num = arreglo[0] ;
+		for (int i = 0; i < arreglo.length; i++)
+		{
+			if (arreglo[i] < num)
+			  num = arreglo[i] ;
+		}
+		return (num);
 	}
 	
 	//devuelve true si encuentra cadena dentro arreglo
 	static boolean existe(String arreglo[],String cadena)
 	{
-		return false;
+	for ( int i = 0; i < arreglo.length ; i ++)
+	{
+		if(arreglo [i] == cadena)
+    		return true;
+	}
+	return false;
 	}
 	
-	public static void main(String args[])
-	{
-		
-	}
 }
